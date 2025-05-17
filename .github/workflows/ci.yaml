@@ -1,0 +1,38 @@
+name: ci
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request: 
+    branches: 
+      - main
+
+jobs:
+    build-and-test:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v4
+
+        - name: Install build tools
+          run: |
+            sudo apt-get update
+            sudo apt-get install -y build-essential # Install gcc and basic tools
+          
+        - name: Compile and run tests
+          run: |
+            gcc -fsanitize=address \
+            src/datastructures.c \
+            src/lexer.c \
+            src/parser.c \
+            src/math_interpreter.c \
+            tests/test_math.c \
+            -o test_math \
+            -lm
+
+            # Execute test
+            ./test_math 
+
+          
+
