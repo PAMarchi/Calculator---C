@@ -26,4 +26,4 @@ Regarding the files:
 
 ## Dependencies
 
-This program depends on GTK4 library
+This program depends on GTK4 library.
