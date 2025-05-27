@@ -23,3 +23,7 @@ Regarding the files:
 - lexer: convert the input into tokens.
 - parser: contains a function that analyzes the input syntax, also comprehends the mathematical analysis part of the calculator (Shunting-yard + RPN evaluation).
 - math_interpreter: interface between the GUI (main program) and the logical part.
+
+## Dependencies
+
+This program depends on GTK4 library

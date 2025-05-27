@@ -363,7 +363,7 @@ void activate(GtkApplication *app, gpointer buffer){
   GtkBuilder *builder; // GUI builder
   GtkWidget *element[TOTAL_ELEMENTS]; // Array of pointers that will point to all elements from GUI
 
-  builder = gtk_builder_new_from_file("GUI.glade"); // Assing the GUI from glade to the builder
+  builder = gtk_builder_new_from_resource("/com/calculator/GUI.glade"); // Assing the GUI from glade to the builder
 
   // Referentiating the GUI elements to element pointers
   element[window]                          = GTK_WIDGET(gtk_builder_get_object(builder, "MainWindow"));
