@@ -1,0 +1,5 @@
+<gresources>
+  <gresource prefix="/com/calculator">
+    <file>GUI.glade</file>
+  </gresource>
+</gresources>
